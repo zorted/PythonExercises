@@ -1,8 +1,12 @@
 
-def search4vowels():
-    """Display any vowels found in an asked-for word."""
-    vowels = set('aeiou')
-    word = input('Provide a word to search for vowels: ')
-    found = vowels.intersection(set(word))
-    for vowel in found:
-            print(vowel)
+def search4vowels(phrase:str) -> set:
+    """Return any vowels found in a supplied word."""
+    vowels = set('aeiou')    
+    return vowels.intersection(set(phrase))
+
+
+def search4letters(phrase: str, letters: str) -> set:
+    """Return a set of the 'letters' found in 'phrase'."""
+    return set(letters).intersection(set(phrase))
+
+
