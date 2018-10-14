@@ -1,0 +1,33 @@
+#Need to create setup.py file as ex:
+
+    from setuptools import setup
+
+    setup(
+        name='vsearch',
+        version='1.0',
+        description='The Head First Python Search Tools',
+        authos='HF Python 2e',
+        author_email='hfpy2e@gmail.com',
+        url='headfirstlabs.com',
+        py_modules=['vsearch'],
+    )
+
+#Create a README.txt file to explain your package
+
+#To create a package distribution, insede files folder type:
+
+    py -3 setup.py sdist
+    -- This command will create some folders including a tar.gz file with our distribution package
+
+#Install the package with pip (Look for your package file on dist folder and run this command from same dist folder)
+
+    py -3 -m pip install vsearch-1.0.tar.gz
+
+#To install pytest (used to verify your code looking for some desnormalize type according to pep8 - ex extra spaces, extra lines....)
+
+    py -3 -m pip install pytest
+    py -3 -m pip install pytest-pep8
+
+#To verifi your code with pytest (on file folder)
+
+    py.test --pep8 vsearch.py

@@ -1,0 +1,8 @@
+#To install Flask
+
+    py -3 -m pip install flask
+
+#To run webserver(on folder of file .py)
+
+    py -3 hello_flask.py
+
